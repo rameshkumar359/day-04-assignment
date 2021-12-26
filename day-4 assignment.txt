@@ -1,0 +1,112 @@
+Q.1)How to compare two JSON have the same properties without order?
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+
+answer:
+
+code:
+
+//comparing two json having the same property wtihout order
+var obj1 = { "name": "Person 1", "age":5 };
+var obj2 = { "age":5, "name": "Person 1" };
+
+function comparing(obj1,obj2){
+    var flag=true
+    if(Object.keys(obj1).length==Object.keys(obj2).length)
+    {
+        for(var key in obj1)
+        {
+            if(obj1[key]==obj2[key])
+            {
+                continue
+            }
+            else
+            {
+                flag=false
+                break
+            }
+        }
+    }
+    else
+    {
+        flag=false
+    }
+    console.log(`the given two json is equal ${flag}`) 
+}
+
+function calling:
+
+comparing(obj1,obj2)
+
+
+output:
+
+the given two json is equal true
+
+==> for two unequal json
+
+code:
+
+var obj1 = { "name": "Person 1", "age":5 };
+var obj2 = { "age":5, "order": "Person 1" };
+
+function comparing(obj1,obj2){
+    var flag=true
+    if(Object.keys(obj1).length==Object.keys(obj2).length)
+    {
+        for(var key in obj1)
+        {
+            if(obj1[key]==obj2[key])
+            {
+                continue
+            }
+            else
+            {
+                flag=false
+                break
+            }
+        }
+    }
+    else
+    {
+        flag=false
+    }
+    console.log(`the given two json is equal ${flag}`) 
+}
+ 
+function calling:
+
+
+comparing(obj1,obj2)
+
+
+output:
+
+the given two json is equal false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
