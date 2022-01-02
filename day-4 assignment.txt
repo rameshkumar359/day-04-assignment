@@ -86,14 +86,570 @@ output:
 the given two json is equal false
 
 
+Q.2)
+a)Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
+b)Use the same rest countries and print all countries name, region, sub region and population
 
 
+code:
+
+a)
+code:
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+xhr.onload= function() {
+    if(xhr.status>=200 && xhr.status<300)
+    {
+        let data=JSON.parse(xhr.response)
+        for(var i=0;i<data.length;i++)
+        {
+            let x=data[i]
+            console.log(x.flag)
+        }
+     }
+}
+xhr.send()
+
+b)
+
+code:
+
+var xhr = new XMLHttpRequest();
+xhr.open('GET', "https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json")
+xhr.onload= function() {
+    if(xhr.status>=200 && xhr.status<300)
+    {
+        let data=JSON.parse(xhr.response)
+        for(var i=0;i<data.length;i++)
+        {
+            let x=data[i]
+            console.log(x.name)
+            console.log(x.region)
+            console.log(x.subregion)
+            console.log(x.population)
+        }
+     }
+}
+xhr.send()
 
 
+output:sample
 
+a)
+https://restcountries.eu/data/afg.svg java.js:10:21
+https://restcountries.eu/data/ala.svg java.js:10:21
+https://restcountries.eu/data/alb.svg java.js:10:21
+https://restcountries.eu/data/dza.svg java.js:10:21
+https://restcountries.eu/data/asm.svg java.js:10:21
+https://restcountries.eu/data/and.svg java.js:10:21
+https://restcountries.eu/data/ago.svg java.js:10:21
+https://restcountries.eu/data/aia.svg java.js:10:21
+https://restcountries.eu/data/ata.svg java.js:10:21
+https://restcountries.eu/data/atg.svg java.js:10:21
+https://restcountries.eu/data/arg.svg
 
+output:sample
 
-
+b)
+Afghanistan java.js:10:21
+Asia java.js:11:21
+Southern Asia java.js:12:21
+27657145 java.js:13:21
+Åland Islands java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+28875 java.js:13:21
+Albania java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+2886026 java.js:13:21
+Algeria java.js:10:21
+Africa java.js:11:21
+Northern Africa java.js:12:21
+40400000 java.js:13:21
+American Samoa java.js:10:21
+Oceania java.js:11:21
+Polynesia java.js:12:21
+57100 java.js:13:21
+Andorra java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+78014 java.js:13:21
+Angola java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+25868000 java.js:13:21
+Anguilla java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+13452 java.js:13:21
+Antarctica java.js:10:21
+Polar java.js:11:21
+<empty string> java.js:12:21
+1000 java.js:13:21
+Antigua and Barbuda java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+86295 java.js:13:21
+Argentina java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+43590400 java.js:13:21
+Armenia java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+2994400 java.js:13:21
+Aruba java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+107394 java.js:13:21
+Australia java.js:10:21
+Oceania java.js:11:21
+Australia and New Zealand java.js:12:21
+24117360 java.js:13:21
+Austria java.js:10:21
+Europe java.js:11:21
+Western Europe java.js:12:21
+8725931 java.js:13:21
+Azerbaijan java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+9730500 java.js:13:21
+Bahamas java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+378040 java.js:13:21
+Bahrain java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+1404900 java.js:13:21
+Bangladesh java.js:10:21
+Asia java.js:11:21
+Southern Asia java.js:12:21
+161006790 java.js:13:21
+Barbados java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+285000 java.js:13:21
+Belarus java.js:10:21
+Europe java.js:11:21
+Eastern Europe java.js:12:21
+9498700 java.js:13:21
+Belgium java.js:10:21
+Europe java.js:11:21
+Western Europe java.js:12:21
+11319511 java.js:13:21
+Belize java.js:10:21
+Americas java.js:11:21
+Central America java.js:12:21
+370300 java.js:13:21
+Benin java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+10653654 java.js:13:21
+Bermuda java.js:10:21
+Americas java.js:11:21
+Northern America java.js:12:21
+61954 java.js:13:21
+Bhutan java.js:10:21
+Asia java.js:11:21
+Southern Asia java.js:12:21
+775620 java.js:13:21
+Bolivia (Plurinational State of) java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+10985059 java.js:13:21
+Bonaire, Sint Eustatius and Saba java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+17408 java.js:13:21
+Bosnia and Herzegovina java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+3531159 java.js:13:21
+Botswana java.js:10:21
+Africa java.js:11:21
+Southern Africa java.js:12:21
+2141206 java.js:13:21
+Bouvet Island java.js:10:21
+<empty string> java.js:11:21
+<empty string> java.js:12:21
+0 java.js:13:21
+Brazil java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+206135893 java.js:13:21
+British Indian Ocean Territory java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+3000 java.js:13:21
+United States Minor Outlying Islands java.js:10:21
+Americas java.js:11:21
+Northern America java.js:12:21
+300 java.js:13:21
+Virgin Islands (British) java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+28514 java.js:13:21
+Virgin Islands (U.S.) java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+114743 java.js:13:21
+Brunei Darussalam java.js:10:21
+Asia java.js:11:21
+South-Eastern Asia java.js:12:21
+411900 java.js:13:21
+Bulgaria java.js:10:21
+Europe java.js:11:21
+Eastern Europe java.js:12:21
+7153784 java.js:13:21
+Burkina Faso java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+19034397 java.js:13:21
+Burundi java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+10114505 java.js:13:21
+Cambodia java.js:10:21
+Asia java.js:11:21
+South-Eastern Asia java.js:12:21
+15626444 java.js:13:21
+Cameroon java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+22709892 java.js:13:21
+Canada java.js:10:21
+Americas java.js:11:21
+Northern America java.js:12:21
+36155487 java.js:13:21
+Cabo Verde java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+531239 java.js:13:21
+Cayman Islands java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+58238 java.js:13:21
+Central African Republic java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+4998000 java.js:13:21
+Chad java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+14497000 java.js:13:21
+Chile java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+18191900 java.js:13:21
+China java.js:10:21
+Asia java.js:11:21
+Eastern Asia java.js:12:21
+1377422166 java.js:13:21
+Christmas Island java.js:10:21
+Oceania java.js:11:21
+Australia and New Zealand java.js:12:21
+2072 java.js:13:21
+Cocos (Keeling) Islands java.js:10:21
+Oceania java.js:11:21
+Australia and New Zealand java.js:12:21
+550 java.js:13:21
+Colombia java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+48759958 java.js:13:21
+Comoros java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+806153 java.js:13:21
+Congo java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+4741000 java.js:13:21
+Congo (Democratic Republic of the) java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+85026000 java.js:13:21
+Cook Islands java.js:10:21
+Oceania java.js:11:21
+Polynesia java.js:12:21
+18100 java.js:13:21
+Costa Rica java.js:10:21
+Americas java.js:11:21
+Central America java.js:12:21
+4890379 java.js:13:21
+Croatia java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+4190669 java.js:13:21
+Cuba java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+11239004 java.js:13:21
+Curaçao java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+154843 java.js:13:21
+Cyprus java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+847000 java.js:13:21
+Czech Republic java.js:10:21
+Europe java.js:11:21
+Eastern Europe java.js:12:21
+10558524 java.js:13:21
+Denmark java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+5717014 java.js:13:21
+Djibouti java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+900000 java.js:13:21
+Dominica java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+71293 java.js:13:21
+Dominican Republic java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+10075045 java.js:13:21
+Ecuador java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+16545799 java.js:13:21
+Egypt java.js:10:21
+Africa java.js:11:21
+Northern Africa java.js:12:21
+91290000 java.js:13:21
+El Salvador java.js:10:21
+Americas java.js:11:21
+Central America java.js:12:21
+6520675 java.js:13:21
+Equatorial Guinea java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+1222442 java.js:13:21
+Eritrea java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+5352000 java.js:13:21
+Estonia java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+1315944 java.js:13:21
+Ethiopia java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+92206005 java.js:13:21
+Falkland Islands (Malvinas) java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+2563 java.js:13:21
+Faroe Islands java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+49376 java.js:13:21
+Fiji java.js:10:21
+Oceania java.js:11:21
+Melanesia java.js:12:21
+867000 java.js:13:21
+Finland java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+5491817 java.js:13:21
+France java.js:10:21
+Europe java.js:11:21
+Western Europe java.js:12:21
+66710000 java.js:13:21
+French Guiana java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+254541 java.js:13:21
+French Polynesia java.js:10:21
+Oceania java.js:11:21
+Polynesia java.js:12:21
+271800 java.js:13:21
+French Southern Territories java.js:10:21
+Africa java.js:11:21
+Southern Africa java.js:12:21
+140 java.js:13:21
+Gabon java.js:10:21
+Africa java.js:11:21
+Middle Africa java.js:12:21
+1802278 java.js:13:21
+Gambia java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+1882450 java.js:13:21
+Georgia java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+3720400 java.js:13:21
+Germany java.js:10:21
+Europe java.js:11:21
+Western Europe java.js:12:21
+81770900 java.js:13:21
+Ghana java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+27670174 java.js:13:21
+Gibraltar java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+33140 java.js:13:21
+Greece java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+10858018 java.js:13:21
+Greenland java.js:10:21
+Americas java.js:11:21
+Northern America java.js:12:21
+55847 java.js:13:21
+Grenada java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+103328 java.js:13:21
+Guadeloupe java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+400132 java.js:13:21
+Guam java.js:10:21
+Oceania java.js:11:21
+Micronesia java.js:12:21
+184200 java.js:13:21
+Guatemala java.js:10:21
+Americas java.js:11:21
+Central America java.js:12:21
+16176133 java.js:13:21
+Guernsey java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+62999 java.js:13:21
+Guinea java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+12947000 java.js:13:21
+Guinea-Bissau java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+1547777 java.js:13:21
+Guyana java.js:10:21
+Americas java.js:11:21
+South America java.js:12:21
+746900 java.js:13:21
+Haiti java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+11078033 java.js:13:21
+Heard Island and McDonald Islands java.js:10:21
+<empty string> java.js:11:21
+<empty string> java.js:12:21
+0 java.js:13:21
+Holy See java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+451 java.js:13:21
+Honduras java.js:10:21
+Americas java.js:11:21
+Central America java.js:12:21
+8576532 java.js:13:21
+Hong Kong java.js:10:21
+Asia java.js:11:21
+Eastern Asia java.js:12:21
+7324300 java.js:13:21
+Hungary java.js:10:21
+Europe java.js:11:21
+Eastern Europe java.js:12:21
+9823000 java.js:13:21
+Iceland java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+334300 java.js:13:21
+India java.js:10:21
+Asia java.js:11:21
+Southern Asia java.js:12:21
+1295210000 java.js:13:21
+Indonesia java.js:10:21
+Asia java.js:11:21
+South-Eastern Asia java.js:12:21
+258705000 java.js:13:21
+Côte d'Ivoire java.js:10:21
+Africa java.js:11:21
+Western Africa java.js:12:21
+22671331 java.js:13:21
+Iran (Islamic Republic of) java.js:10:21
+Asia java.js:11:21
+Southern Asia java.js:12:21
+79369900 java.js:13:21
+Iraq java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+37883543 java.js:13:21
+Ireland java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+6378000 java.js:13:21
+Isle of Man java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+84497 java.js:13:21
+Israel java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+8527400 java.js:13:21
+Italy java.js:10:21
+Europe java.js:11:21
+Southern Europe java.js:12:21
+60665551 java.js:13:21
+Jamaica java.js:10:21
+Americas java.js:11:21
+Caribbean java.js:12:21
+2723246 java.js:13:21
+Japan java.js:10:21
+Asia java.js:11:21
+Eastern Asia java.js:12:21
+126960000 java.js:13:21
+Jersey java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+100800 java.js:13:21
+Jordan java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+9531712 java.js:13:21
+Kazakhstan java.js:10:21
+Asia java.js:11:21
+Central Asia java.js:12:21
+17753200 java.js:13:21
+Kenya java.js:10:21
+Africa java.js:11:21
+Eastern Africa java.js:12:21
+47251000 java.js:13:21
+Kiribati java.js:10:21
+Oceania java.js:11:21
+Micronesia java.js:12:21
+113400 java.js:13:21
+Kuwait java.js:10:21
+Asia java.js:11:21
+Western Asia java.js:12:21
+4183658 java.js:13:21
+Kyrgyzstan java.js:10:21
+Asia java.js:11:21
+Central Asia java.js:12:21
+6047800 java.js:13:21
+Lao People's Democratic Republic java.js:10:21
+Asia java.js:11:21
+South-Eastern Asia java.js:12:21
+6492400 java.js:13:21
+Latvia java.js:10:21
+Europe java.js:11:21
+Northern Europe java.js:12:21
+1961600 java.js:13:21
+Lebanon java.js:10:21
+Asia
 
 
 
